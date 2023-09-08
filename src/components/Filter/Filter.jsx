@@ -9,7 +9,6 @@ const Filter = ({ changeFilter, value }) => {
         type="text"
         onChange={changeFilter}
         value={value}
-        className="form-control"
         id="findContact"
       />
     </div>

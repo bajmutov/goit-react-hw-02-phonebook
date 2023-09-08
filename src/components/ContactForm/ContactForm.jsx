@@ -26,6 +26,7 @@ class ContactForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <div class="form-group"></div>
           <label htmlFor="nameId">Name</label>
           <input
             type="text"
@@ -38,6 +39,7 @@ class ContactForm extends Component {
             value={this.state.name}
             placeholder="Jacob Mercer"
           />
+          <div />
           <label htmlFor="numberId">Number</label>
           <input
             type="tel"
@@ -50,7 +52,11 @@ class ContactForm extends Component {
             value={this.state.number}
             placeholder="+380501122233"
           />
-          <button type="submit">Add contact</button>
+          <div>
+            <button type="submit" className="btn btn-primary">
+              Add contact
+            </button>
+          </div>
         </form>
       </div>
     );
