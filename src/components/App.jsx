@@ -40,14 +40,23 @@ class App extends Component {
     );
   };
 
+  handleDelete = id => {
+    this.setState(prev => ({
+      contacts: prev.contacts.filter(el => el.id !== id),
+    }));
+  };
+
   render() {
     return (
       <div>
         <h1>Phonebook</h1>
-        <ContactForm onSubmit={this.addContact} />
+        <ContactForm addContact={this.addContact} />
         <h2>Contacts</h2>
         <Filter changeFilter={this.changeFilter} value={this.state.filter} />
-        <ContactList userContacts={this.getVisibleContact()} />
+        <ContactList
+          userContacts={this.getVisibleContact()}
+          handleDelete={this.handleDelete}
+        />
       </div>
     );
   }
