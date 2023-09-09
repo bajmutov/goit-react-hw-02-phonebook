@@ -5,11 +5,13 @@ const Filter = ({ changeFilter, value }) => {
         Find contacts by name
       </label>
       <input
+        className="form-input filterInput"
         name="title"
         type="text"
         onChange={changeFilter}
         value={value}
         id="findContact"
+        placeholder="Jacob Mercer"
       />
     </div>
   );

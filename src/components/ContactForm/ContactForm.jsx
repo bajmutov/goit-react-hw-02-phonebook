@@ -26,9 +26,11 @@ class ContactForm extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <div class="form-group"></div>
-          <label htmlFor="nameId">Name</label>
+          <label htmlFor="nameId" className="formLabel">
+            Name
+          </label>
           <input
+            className="form-input"
             type="text"
             name="name"
             id="nameId"
@@ -40,8 +42,11 @@ class ContactForm extends Component {
             placeholder="Jacob Mercer"
           />
           <div />
-          <label htmlFor="numberId">Number</label>
+          <label htmlFor="numberId" className="formLabel">
+            Number
+          </label>
           <input
+            className="form-input"
             type="tel"
             name="number"
             id="numberId"
@@ -50,7 +55,7 @@ class ContactForm extends Component {
             required
             onChange={this.handleChange}
             value={this.state.number}
-            placeholder="+380501122233"
+            placeholder="111-22-33"
           />
           <div>
             <button type="submit" className="btn btn-primary">

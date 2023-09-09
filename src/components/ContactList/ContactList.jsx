@@ -2,7 +2,7 @@ const ContactList = ({ userContacts, handleDelete }) => {
   return (
     <ul>
       {userContacts.map(({ id, name, number }) => (
-        <li key={id}>
+        <li key={id} className="contactItem">
           {name}: {number}
           <button
             type="button"
